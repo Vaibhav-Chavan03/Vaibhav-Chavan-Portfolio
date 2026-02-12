@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   BASE STYLES
+   ========================= */
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+  * {
+    @apply antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-warmGray-600;
+    font-family: var(--font-inter);
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-charcoal-900;
+    font-family: var(--font-playfair);
+    font-weight: 600;
+  }
+
+  p {
+    @apply text-warmGray-600;
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   COMPONENTS
+   ========================= */
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-sage-500 text-white rounded-soft font-medium
+           hover:bg-sage-600 transition-all duration-300
+           shadow-soft hover:shadow-calm;
+  }
+
+ .btn-secondary {
+  @apply px-8 py-4 bg-white text-sage-500 rounded-soft font-medium
+         border-2 border-sage-500
+         transition-all duration-300 shadow-soft;
+}
+
+.btn-secondary:hover {
+  @apply bg-sage-50;
+}
+
+
+  .card-calm {
+    @apply bg-white rounded-calm p-8 shadow-calm
+           hover:shadow-xl transition-shadow duration-500;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:py-32 md:px-12;
+  }
+
+  .container-calm {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* =========================
+   UTILITIES
+   ========================= */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-sage-500 to-lavender-500
+           bg-clip-text text-transparent;
+  }
+
+  .transition-calm {
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+
+/* =========================
+   EXTRAS
+   ========================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-sage-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sage-500;
+}
+
+::selection {
+  @apply bg-lavender-400 text-charcoal-900;
+}
+
+*:focus-visible {
+  @apply outline-none ring-2 ring-sage-400 ring-offset-2 ring-offset-cream-50;
+}

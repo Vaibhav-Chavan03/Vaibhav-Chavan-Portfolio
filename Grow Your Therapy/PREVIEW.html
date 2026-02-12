@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm, Trustworthy Websites for Therapists | Vaibhav Design Co.</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream-50: #FAF9F7;
+            --cream-100: #F6F4F1;
+            --sage-400: #8FAE9E;
+            --sage-500: #7FA69B;
+            --sage-600: #6C978B;
+            --lavender-400: #D8D2E8;
+            --lavender-500: #C6BFD8;
+            --charcoal-900: #2F2F2F;
+            --warm-gray-600: #5C5C5C;
+            --warm-gray-500: #8A8A8A;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream-50);
+            color: var(--warm-gray-600);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--charcoal-900);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--cream-50) 0%, var(--cream-100) 50%, rgba(198, 191, 216, 0.1) 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-bg-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(127, 166, 155, 0.2);
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-bg-2 {
+            width: 350px;
+            height: 350px;
+            background: rgba(198, 191, 216, 0.2);
+            bottom: -80px;
+            left: -80px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 120px 24px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 24px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--sage-600);
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--sage-500), var(--lavender-500));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--warm-gray-600);
+            margin-bottom: 48px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 64px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-weight: 500;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--sage-500);
+            color: white;
+            border: none;
+            box-shadow: 0 2px 12px rgba(47, 47, 47, 0.04);
+        }
+
+        .btn-primary:hover {
+            background: var(--sage-600);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 24px rgba(47, 47, 47, 0.08);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--sage-500);
+            border: 2px solid var(--sage-500);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cream-50);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--warm-gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(47, 47, 47, 0.06);
+            transition: all 0.5s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(47, 47, 47, 0.12);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(127, 166, 155, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 0.875rem;
+            color: var(--warm-gray-500);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to bottom, white, var(--cream-100));
+            border-top: 1px solid rgba(138, 138, 138, 0.1);
+            padding: 80px 24px 40px;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--charcoal-900);
+            margin-bottom: 16px;
+        }
+
+        .footer-tagline {
+            color: var(--warm-gray-600);
+            margin-bottom: 32px;
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(138, 138, 138, 0.1);
+            font-size: 0.875rem;
+            color: var(--warm-gray-500);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 80px 24px;
+            }
+
+            section {
+                padding: 80px 24px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg hero-bg-1"></div>
+        <div class="hero-bg hero-bg-2"></div>
+        
+        <div class="hero-content">
+            <div class="badge">Website Design & Marketing for Therapists</div>
+            
+            <h1>
+                Calm, trustworthy websites for therapists who want more 
+                <span class="gradient-text">aligned clients</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                We design and market therapy websites that feel safe, warm, and professional—so your clients feel supported before the first session.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">View Sample Websites</a>
+                <a href="#" class="btn btn-secondary">Book a Free Calm Audit</a>
+            </div>
+            
+            <p style="color: var(--warm-gray-500); font-size: 0.875rem;">
+                Trusted by 200+ mental health professionals
+            </p>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Supporting Mental Health Professionals</h2>
+                <p class="section-subtitle">
+                    Your work is emotional. Your website should be gentle.
+                </p>
+            </div>
+
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Psychiatrists</h3>
+                    <p>Medical professionals specializing in mental health</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Psychologists</h3>
+                    <p>Experts in understanding human behavior and thought</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Couple & Family Therapists</h3>
+                    <p>Specialists in relationship and family dynamics</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3>Licensed Counselors</h3>
+                    <p>Professional guides through life's challenges</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Psychotherapists</h3>
+                    <p>Practitioners of talk therapy and healing</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Clinical Social Workers</h3>
+                    <p>Licensed professionals supporting mental wellness</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🍷</div>
+                    <h3>Addiction Specialists</h3>
+                    <p>Experts in recovery and substance support</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Hypnotherapists</h3>
+                    <p>Practitioners of guided therapeutic hypnosis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section style="background: linear-gradient(to bottom, white, var(--cream-50));">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Help You Connect</h2>
+                <p class="section-subtitle">
+                    Every service is designed to reduce anxiety and build trust with your ideal clients
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Website Design</h3>
+                    <p>Calm, professional websites that feel like your therapy practice</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Website Redesign</h3>
+                    <p>Transform your existing site into a safe, welcoming space</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>SEO for Therapists</h3>
+                    <p>Help aligned clients find you through thoughtful optimization</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Booking Optimization</h3>
+                    <p>Make scheduling simple and reassuring for new clients</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Ongoing Care</h3>
+                    <p>Website maintenance so you can focus on your clients</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Brand Identity</h3>
+                    <p>Visual identity that reflects your therapeutic approach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, rgba(127, 166, 155, 0.1), rgba(255, 255, 255, 1), rgba(198, 191, 216, 0.1));">
+        <div class="container">
+            <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="margin-bottom: 24px;">Let's Create a Website That Feels Safe</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 40px; line-height: 1.8;">
+                    For you and your clients. No sales pressure. No aggressive timelines. Just calm, thoughtful work that honors your practice.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">📅 Book a Free Calm Audit</a>
+                    <a href="#" class="btn btn-secondary">✉️ Send Us a Message</a>
+                </div>
+
+                <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(138, 138, 138, 0.1);">
+                    <p style="font-size: 0.875rem; color: var(--warm-gray-500);">
+                        ✓ No commitment required &nbsp;•&nbsp; ✓ 15-minute consultation &nbsp;•&nbsp; ✓ Reply within 24 hours
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Vaibhav Design Co.</div>
+            <p class="footer-tagline">
+                Creating calm, trustworthy websites for mental health professionals<br>
+                who care deeply about their clients.
+            </p>
+            <p style="font-size: 0.875rem; color: var(--sage-600); display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <span style="font-size: 16px;">💚</span> Designed with care, not noise
+            </p>
+
+            <div class="footer-bottom">
+                © 2024 Vaibhav Design Co. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
